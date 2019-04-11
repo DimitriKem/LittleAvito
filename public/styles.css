@@ -1,0 +1,18 @@
+body.container {
+    margin: 2rem auto;
+    
+}
+
+header.hero .hero-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.hero .hero-body .title {
+   margin: 0;
+}
+
+main.section {
+    padding: 0 1.5 rem 1.5 rem;
+}

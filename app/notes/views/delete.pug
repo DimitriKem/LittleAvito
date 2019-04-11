@@ -1,0 +1,11 @@
+extends /index
+
+block header
+    h1.title= note.title
+
+block main
+    p.subtitle Вы уверены что вы хотите удалить заметку?
+
+    form.buttons(method='post')
+        a.button(href=`/notes/${note._id}`) Нет
+        button.button(type='submit') Да

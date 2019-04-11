@@ -1,0 +1,23 @@
+extends /index
+
+block header
+    h1.title Обьявления
+    a.button.is-primary(href='/notes/create') Создать объявление
+    
+
+block main
+    div.container
+        div.columns.is-multiline
+            for note in notes
+                div.column.is-4    
+                    div.card
+                        div.card-header
+                            h3.card-header-title.is-4= note.title
+
+                        div.card-content
+                            div.content= note.content    
+
+                        div.card-footer
+                            a.card-footer-item(href=`/notes/${note._id}`) Подробнее
+                            a.card-footer-item(href=`/notes/${note._id}/update`) Редактировать
+                            a.card-footer-item(href=`/notes/${note._id}/delete`) Удалить

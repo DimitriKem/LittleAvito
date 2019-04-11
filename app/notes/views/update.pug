@@ -1,0 +1,16 @@
+extends /index
+
+block header
+    h1.title= note.title
+
+block main
+    form(method='POST')
+        div.field
+            input.input(type="text" name='title' value=note.title placeholder='Название' required)
+
+        div.field
+            textarea.textarea(name='content' placeholder='Содержание' required)= note.content
+
+        div.buttons
+            a.button(href=`/notes/${note._id}`) Назад
+            button.button.is-primary(type='submit') Сохранить

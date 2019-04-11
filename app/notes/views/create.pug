@@ -1,0 +1,16 @@
+extends /index
+
+block header
+    h1.title Новая заметка
+
+block main
+    form(method='POST')
+        div.field
+            input.input(type="text" name='title' placeholder='Название' required)
+
+        div.field
+            textarea.textarea(name='content' placeholder='Содержание' required)
+
+        div.buttons
+            a.button(href="/notes") Отменить
+            button.button.is-primary(type='submit') Создать
